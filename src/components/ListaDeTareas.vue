@@ -5,7 +5,11 @@
 
  const addTarea=()=>{
     tareas.value.push(nuevaTarea.value)
-    nuevaTarea.value='.i.'
+    nuevaTarea.value=''
+ }
+
+ const borrarTarea=(index)=>{
+    tareas.value.splice(index,1) 
  }
  
 </script>
@@ -17,7 +21,8 @@
         <input type="text" v-model="nuevaTarea" v-on:keyup.enter="addTarea">
         <ul>
             <li v-for="(tarea,index) in tareas" v-bind:key="index">
-                {{tarea}}
+                {{tarea}}{{ index }}
+                <button v-on:click="borrarTarea(index)" class="bg-danger">Borrar tarea</button>
             </li>
         </ul>
     </div>
