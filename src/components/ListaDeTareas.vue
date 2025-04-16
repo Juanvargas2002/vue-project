@@ -21,7 +21,7 @@
         <input type="text" v-model="nuevaTarea" v-on:keyup.enter="addTarea">
         <ul>
             <li v-for="(tarea,index) in tareas" v-bind:key="index">
-                {{tarea}}{{ index }}
+                {{tarea}}
                 <button v-on:click="borrarTarea(index)" class="bg-danger">Borrar tarea</button>
             </li>
         </ul>

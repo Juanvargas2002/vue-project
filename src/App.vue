@@ -1,17 +1,10 @@
 <script setup>
-import contador from './components/Contador.vue'
-import listadetareas from './components/ListaDeTareas.vue'
-import {ref} from 'vue'
-const verificar=ref(false)
-const altercount=()=>{
-  verificar.value=!verificar.value
-}
+import mainview from './views/mainview.vue'
+
 </script>
 
 <template>
-  <button v-on:click="altercount">alternar ver contador</button>
-  <contador v-if="verificar==true"></contador>
-  <listadetareas></listadetareas>
+  <mainview></mainview>
 </template> 
 
 <style scoped>
