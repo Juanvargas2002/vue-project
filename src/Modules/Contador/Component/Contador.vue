@@ -11,7 +11,7 @@ const decrement=()=>{
 
 <template>
   <p>
-    Hola mundo
+    Contador
   </p>
   <p>
     {{ contador }}
